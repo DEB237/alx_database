@@ -1,6 +1,6 @@
-#!/bin/bash
+-- Script to list all tables of a database in MySQL server
 
-# Script to list all tables of a database in MySQL server
+#!/bin/bash
 
 # Check if the database name is provided as an argument
 if [ $# -eq 0 ]; then
