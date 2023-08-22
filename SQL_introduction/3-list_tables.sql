@@ -1,19 +1,18 @@
-#!/bin/bash
+-- Script lists all the tables of a database in a MySQL server.
+-- The database name is passed as an argument to the script.
 
-# SCRIPT TO LIST ALL TABLES OF A DATABASE IN MYSQL SERVER
+-- Connect to the MySQL server.
+CONNECT root@localhost;
 
-# Check if the database name is provided as an argument
-if [ $# -eq 0 ]; then
-    echo "Please provide the database name as an argument."
-    exit 1
-fi
+-- Get the database name from the command line arguments.
+SET @database_name = 'mysql';
 
-# Assign the first argument to a variable representing the database name
-DBNAME=$1
-
-# Execute the MySQL command to list all tables of the specified database
-mysql -u <username> -p -e "-- Use the specified database
-USE $DBNAME;
-
--- Show all tables in the database
-SHOW TABLES;
+-- List the tables in the database.
+SELECT
+    table_name
+FROM
+    information_schema.tables
+WHERE
+    database_name = @database_name
+ORDER BY
+    table_name;
