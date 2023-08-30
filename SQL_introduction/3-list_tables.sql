@@ -5,7 +5,7 @@
 SET @database_name = 'mysql';
 
 -- List the tables in the database.
-SELECT
+SHOW TABLE
     table_name
 FROM
     information_schema.tables
