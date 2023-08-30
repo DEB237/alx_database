@@ -1,4 +1,4 @@
---Script to create the table second_table and add multiple rows in the hbtn_0c_0 database in MySQL server
+-- Script to create the table second_table and add multiple rows in the hbtn_0c_0 database in MySQL server
 
 -- Create table second_table and add properties    
 CREATE TABLE IF NOT EXISTS second_table (id int, name VARCHAR(256), score INT);
