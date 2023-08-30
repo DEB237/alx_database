@@ -1,4 +1,4 @@
--- Prints the full description of the table first_table from the hbtn_0c_0 database in MySQL server
+-- Prints the full description of the table first_table
 
- SHOW CREATE TABLE frist_table;  
+SELECT COLUMN_NAME, COLUMN_TYPE, IS_NULLABLE, COLUMN_DEFAULT FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = database AND TABLE_NAME = table
    
